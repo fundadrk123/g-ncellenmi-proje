@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Çizim Uygulaması</title>
+</head>
+
+
+<body>
+
+    <div class="canvas-container">
+        <canvas id="canvas"></canvas>
+    </div>
+
+
+    <div class="tools-container">
+        <button id="kalemBtn" class="animasyonlu-buton" onclick="kalem()"><i class="fas fa-pencil-alt"></i></button>
+        <button id="silgiBtn" onclick="silgi()"><i class="fas fa-eraser"></i></button>
+        <label id="kalemBoyutu" for="boyutSec"><i class="fa-solid fa-magnifying-glass"></i></label>
+        <input id="boyut" type="range" id="boyutSec" min="1" max="20" onchange="boyutDegistir(this.value)" value="1">
+
+        <input type="text" id="metin" placeholder="Metin Girin">
+        <button id="yaz" onclick="metinEkle()"><i class="fas fa-font"></i></button>
+    </div>
+
+
+    <div class="color-picker">
+    </div>
+    <div class="renk-paleti">
+        <button id="renkEkleBtn"><i class="fa-solid fa-brush"></i></button>
+        <button class="renk-dugmesi" data-renk="#000000"></button>
+        <button class="renk-dugmesi" data-renk="#FF0000"></button>
+        <button class="renk-dugmesi" data-renk="#00FF00"></button>
+        <button class="renk-dugmesi" data-renk="#0000FF"></button>
+        <button class="renk-dugmesi" data-renk="#ffe820"></button>
+        <button class="renk-dugmesi" data-renk="#ff9d00"></button>
+        <button class="renk-dugmesi" data-renk="#00a0e6"></button>
+    </div>
+
+
+
+    <div class="button-group">
+        <button type="button" id="renkSecBtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="renkPaleti" class="color-picker_button active-color" aria-label="Vurgu" title="Renk Seç"><i class="fa-sharp fa-solid fa-palette"></i>
+        </button>
+        <button id="taşımaseçme" onclick="taşı()"><i class="fa-regular fa-hand"></i></button>
+        <button onclick="geriAl()"><i class="fas fa-undo"></i></button>
+        <button onclick="ileriAl()"><i class="fas fa-redo"></i></button>
+        <button id="dikdortgen" onclick="dikdortgenCiz()"><i class="fas fa-square"></i></button>
+        <button id="daire" onclick="daireCiz()"><i class="fas fa-circle"> </i></button>
+        <button id="temizle" onclick="temizle()"><i class="fas fa-trash-alt"></i></button>
+    </div>
+
+    <script src="fabric.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

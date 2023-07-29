@@ -1,0 +1,183 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.canvas-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+canvas {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.tools-container {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tools-container label {
+    font-weight: bold;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    left: 800px;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.button-group button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-group button:hover {
+    background-color: #0056b3;
+}
+
+.button-group button:focus {
+    outline: none;
+}
+
+.button-group button:active {
+    transform: scale(0.95);
+}
+
+.color-picker {
+    display: flex;
+    align-items: center;
+}
+
+#fosforluKalem {
+    margin-left: 10px;
+}
+
+button#kalemBtn,
+button#silgiBtn {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#kalemBtn:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+}
+
+button#silgiBtn:hover {
+    background-color: #0056b3;
+}
+
+.renk-paleti {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    top: 100px;
+    left: 200px;
+}
+
+.renk-dugmesi {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.renk-dugmesi[data-renk="#FF0000"] {
+    background-color: #FF0000;
+}
+
+.renk-dugmesi[data-renk="#00FF00"] {
+    background-color: #00FF00;
+}
+
+.renk-dugmesi[data-renk="#0000FF"] {
+    background-color: #0000FF;
+}
+
+.renk-dugmesi[data-renk="#000000"] {
+    background-color: #000000;
+}
+
+.renk-dugmesi[data-renk="#ffe820"] {
+    background-color: #ffe820;
+}
+
+.renk-dugmesi[data-renk="#ff9d00"] {
+    background-color: #ff9d00;
+}
+
+.renk-dugmesi[data-renk="#00a0e6"] {
+    background-color: #00a0e6;
+}
+
+.color-picker_button {
+    width: 100px;
+    height: 50px;
+    background-color: #FF0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.renk-paleti {
+    display: none;
+}
+
+.renk-paleti.open {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.renk-dugmesi {
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#renkEkleBtn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
